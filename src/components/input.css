@@ -1,0 +1,119 @@
+.form-div{
+  display: block;
+}
+
+.inputFields{
+   
+  display: flex;
+  
+}
+
+.inputButtons{
+  grid-area: input-buttons;
+  display: flex;
+  justify-content: space-around;
+  margin: 3px auto;
+}
+.ftIn{
+  display: flex;
+  grid-area: ftIn;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.number-button ul {
+  
+  margin: 5px 10px;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: repeat(4,auto);
+  grid-column-gap: 10px;
+  justify-content: space-around;
+  max-width: 350px;
+  
+
+}
+.number-button ul li {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4.5rem;
+  height: 3rem;
+  border-radius: 25%;
+  background:  #00A9F1;
+  color: white;
+  margin: 5px 5px
+}
+.number-button ul li:hover,
+.number-button ul li:focus{
+  background: #00DFB4;
+}
+.btn{
+  height: 40px;;
+  width: 45px;
+  background: #00DFB4;
+  cursor: pointer;
+  display: flex;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: auto 5px
+        
+    
+ 
+
+}
+.btn:hover{
+  background: #00A9F1
+}
+
+ 
+.formStyle input{
+  margin-top: 5px;
+  max-width: 40px;
+  margin-right: 5px;
+}
+
+.labelStyle{
+  margin-right: 5px;
+}
+
+@media (min-width: 790px){
+  .form-div{
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+    "formStyle formStyle formStyle formStyle"
+    "ftIn ftIn input-buttons input-buttons "
+    ". number-buttons number-buttons number-buttons"
+    ". number-buttons number-buttons number-buttons"
+    ". number-buttons number-buttons number-buttons";
+    align-items: center;
+    justify-content: center;
+    
+    
+  
+  }
+  .formStyle {
+    
+   grid-area: formStyle;
+   display: block;
+   
+   padding: .4rem;
+   
+   
+   
+  }
+  .number-button{
+    grid-area: number-buttons;
+   }
+  
+}
+

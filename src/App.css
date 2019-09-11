@@ -1,33 +1,133 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.container{
+ margin: 0 5px;
+}
+.header{
+  display: block;
+}
+.viewport{
+  
+  
+  
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "plus minus"
+    "plus minus"
+    "answer answer";
+    height:40vh;
+    border: black solid 1px;
+    background: #000000;
+    color: #00DFB4 ;
+    border-radius: 0 0 5px 5px;
+    overflow: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-div label{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.form-div input{
+  border-radius: 10px;
+  line-height: 1.8rem;
+  text-align: justify;
+  font-size: 1.3rem
 }
 
-.App-link {
-  color: #61dafb;
+@media(min-width: 790px){
+  .bodydiv{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .container{
+    z-index: 1;
+    position: relative;
+    align-self:center;
+    
+    height: 100vh;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "...... ....... header header header"
+    "form-div form-div viewport viewport viewport"
+    "form-div form-div viewport viewport viewport"
+    "form-div form-div viewport viewport viewport"
+     "form-div form-div viewport viewport viewport"
+     "form-div form-div viewport viewport viewport"
+     "form-div form-div viewport viewport viewport";
+    
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
+  }
+  
+  .Header{
+    border-radius: 5px 5px 0 0;
+    grid-area: header;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .viewport{
+    grid-area: viewport;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "plus minus"
+    "plus minus"
+    "answer answer";
+    height:80vh;
+    border: black solid 1px;
+    background: #000000;
+    color: #00DFB4 ;
+    border-radius: 0 0 5px 5px;
+    overflow: scroll;
+  }
+  .viewport ul{
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .viewport ul .plus{
+    grid-area: plus
+  }
+  .viewport ul .minus{
+    grid-area: minus;
+    list-style: none;
+  }
+  .Answer{
+    width: 70%;
+    height: auto;
+    font-size: 2.1rem;
+    grid-area: answer;
+   
+  }
+  .Answer h3{
+    font-size: 2rem;
+  }
+  
+  .form-div{
+    grid-area: form-div;
+    align-self: center;
+    z-index: 2;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
