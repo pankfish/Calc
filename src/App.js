@@ -273,7 +273,9 @@ class App extends Component {
       numberInputType: 'ft'
     })
     calc.footInputArray = [];
-    calc.inchInputArray = []
+    calc.inchInputArray = [];
+    calc.numeInputArray= [];
+    calc.denuInputArray= [];
   
       
     }
@@ -311,8 +313,10 @@ class App extends Component {
       })
       
      
-      calc.footInputArray = []
-      calc.inchInputArray = []
+      calc.footInputArray = [];
+      calc.inchInputArray = [];
+      calc.numeInputArray= [];
+      calc.denuInputArray= [];
     }
 
     // ******* Add Numbers ********** 
@@ -348,6 +352,8 @@ class App extends Component {
       })
       calc.footInputArray = [];
       calc.inchInputArray = [];
+      calc.numeInputArray= [];
+      calc.denuInputArray= [];
     }
 
 //Click event to change input type on the touchpad from foot => inch => fraction
