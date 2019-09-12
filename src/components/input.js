@@ -43,9 +43,11 @@ export function Input(props){
             <label htmlFor="" 
               className="labelStyle">Fr</label>
             <input 
+             id="numerator"
              value={props.numeVal}
              onChange={props.handleChangeNume} />
             <input 
+            id="denumerator"
              value={props.denuVal}
              onChange={props.handleChangeDenu}/>
           </div>
@@ -68,7 +70,8 @@ export function Input(props){
        >ft</li>
         <li className ="inputVal btn" id="in"
        >in</li>
-       <li className="inputVal btn" id="fr">Fr</li>
+       <li className="inputVal btn" id="nume">Nume</li>
+       <li className="inputVal btn" id="denu">Denu</li>
        
           </ul>
        

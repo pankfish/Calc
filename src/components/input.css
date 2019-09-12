@@ -92,9 +92,9 @@
     grid-template-areas:
     "formStyle formStyle formStyle formStyle"
     "ftIn ftIn input-buttons input-buttons "
-    ". number-buttons number-buttons number-buttons"
-    ". number-buttons number-buttons number-buttons"
-    ". number-buttons number-buttons number-buttons";
+    " number-buttons number-buttons number-buttons ."
+    " number-buttons number-buttons number-buttons ."
+    "number-buttons number-buttons number-buttons .";
     align-items: center;
     justify-content: center;
     

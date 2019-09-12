@@ -20,7 +20,9 @@ const calc ={
   minusNumeArray: [],
   inputValType: '',
   footInputArray: [],
-  inchInputArray:[]
+  inchInputArray:[],
+  numeInputArray: [],
+  denuInputArray: []
 }
 const calculations= {
   subtractNumes(posNume, negNume){
@@ -368,7 +370,7 @@ class App extends Component {
 
     handleClick(e){
       const { numberInputType } = this.state;
-      const { footInputArray, inchInputArray } = calc
+      const { footInputArray, inchInputArray, numeInputArray, denuInputArray } = calc
       let input= e.target;
       
       if(e.target.className.includes('number')){
@@ -388,6 +390,22 @@ class App extends Component {
           
           this.setState({
             inchInputVal: inputNum
+          })
+        }else if(numberInputType ==="nume" || numberInputType === 'numerator'){
+          numeInputArray.push(String(input.value));
+          let numeInputString= numeInputArray.join('');
+          let inputNum = Number(numeInputString)
+          
+          this.setState({
+            numeInputVal: inputNum
+          })
+        }else if(numberInputType ==="denu" || numberInputType === 'denumerator'){
+          denuInputArray.push(String(input.value));
+          let denuInputString= denuInputArray.join('');
+          let inputNum = Number(denuInputString)
+          
+          this.setState({
+            denuInputVal: inputNum
           })
         }
       }
